@@ -62,7 +62,10 @@ Or check a specific wallet address:
 ```bash
 0g-chain keys show mywallet -a
 ```
-
+### **Check Privatey EVM** ##
+```
+0gchaind keys unsafe-export-eth-key wallet
+```
 ---
 
 ## **🔄 Step 2: Sync the Node**
