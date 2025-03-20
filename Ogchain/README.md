@@ -107,12 +107,12 @@ After creating the validator, verify its status.
 
 Check validator status:
 ```bash
-0g-chain query staking validator $(0g-chain keys show mywallet --bech val -a)
+0gchaind query staking validator $(0gchaind keys show wallet --bech val -a)
 ```
 
 Check all validators in the network:
 ```bash
-0g-chain query staking validators --limit=1000 -o json | jq '.validators[] | {moniker: .description.moniker, status: .status}'
+0gchaind query staking validators --limit=1000 -o json | jq '.validators[] | {moniker: .description.moniker, status: .status}'
 ```
 
 ---
@@ -120,11 +120,11 @@ Check all validators in the network:
 ## **📊 Step 5: Monitor Logs**
 To view real-time logs:
 ```bash
-journalctl -fu 0g-chain -o cat
+journalctl -fu 0gchaind -o cat
 ```
 Or, check systemd service status:
 ```bash
-systemctl status 0g-chain
+systemctl status 0gchaind
 ```
 
 ---
@@ -132,7 +132,7 @@ systemctl status 0g-chain
 ## **💰 Step 6: Delegate More Tokens**
 To stake additional tokens to your validator:
 ```bash
-0g-chain tx staking delegate $(0g-chain keys show mywallet --bech val -a) 1000000uog --from=mywallet --chain-id=0g-chain-testnet --gas=auto
+0gchaind tx staking delegate $(0gchaind keys show mywallet --bech val -a) 1000000uog --from=mywallet --chain-id=zgtendermint_16600-2 --gas=auto
 ```
 📌 **Replace `1000000uog` with the amount you want to delegate.**
 
@@ -141,14 +141,14 @@ To stake additional tokens to your validator:
 ## **🔄 Step 7: Unjail Validator (if Slashed)**
 If your validator gets **slashed** and jailed, unjail it with:
 ```bash
-0g-chain tx slashing unjail --from=mywallet --chain-id=0g-chain-testnet --gas=auto
+0gchaind tx slashing unjail --from=wallet --chain-id=zgtendermint_16600-2 --gas=auto
 ```
 
 ---
 
 ## **🚀 Step 8: Check Wallet Balance**
 ```bash
-0g-chain query bank balances $(0g-chain keys show mywallet -a)
+0gchaind query bank balances $(0gchaind keys show wallet -a)
 ```
 
 ---
@@ -156,7 +156,7 @@ If your validator gets **slashed** and jailed, unjail it with:
 ## **📌 Step 9: Withdraw Staking Rewards**
 To withdraw staking rewards from your validator:
 ```bash
-0g-chain tx distribution withdraw-rewards $(0g-chain keys show mywallet --bech val -a) --from=mywallet --commission --chain-id=0g-chain-testnet --gas=auto
+0gchaind tx distribution withdraw-rewards $(0gchaind keys show mywallet --bech val -a) --from=wallet --commission --chain-id=zgtendermint_16600-2 --gas=auto
 ```
 
 ---
@@ -164,7 +164,7 @@ To withdraw staking rewards from your validator:
 ## **✅ Step 10: Unbond Your Validator (if Needed)**
 If you wish to remove your validator:
 ```bash
-0g-chain tx staking unbond $(0g-chain keys show mywallet --bech val -a) 1000000uog --from=mywallet --chain-id=0g-chain-testnet --gas=auto
+0gchaind tx staking unbond $(0gchaind keys show wallet --bech val -a) 1000000uog --from=mywallet --chain-id=zgtendermint_16600-2 --gas=auto
 ```
 ⚠️ **After unbonding, your tokens will be locked for a certain period before they become available.**
 
@@ -173,12 +173,12 @@ If you wish to remove your validator:
 ## **🔄 Step 11: Restart & Stop Node**
 To **restart** the node:
 ```bash
-systemctl restart 0g-chain
+systemctl restart 0gchaind
 ```
 
 To **stop** the node:
 ```bash
-systemctl stop 0g-chain
+systemctl stop 0gchaind
 ```
 
 ---
