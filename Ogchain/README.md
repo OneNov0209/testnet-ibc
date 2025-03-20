@@ -43,24 +43,24 @@ Before running the validator, you need a wallet.
 
 ### **Create a New Wallet**
 ```bash
-0g-chain keys add mywallet
+0gchaind keys add mywallet
 ```
 📌 **Save the mnemonic seed** securely.
 
 ### **Import an Existing Wallet**
 If you already have a wallet, import it using:
 ```bash
-0g-chain keys add mywallet --recover
+0gchaind keys add mywallet --recover
 ```
 Enter the **mnemonic phrase** when prompted.
 
 ### **Check Wallet Address**
 ```bash
-0g-chain keys list
+0gchaind keys list
 ```
 Or check a specific wallet address:
 ```bash
-0g-chain keys show mywallet -a
+0gchaind keys show mywallet -a
 ```
 ### **Check Privatey EVM** ##
 ```
@@ -73,7 +73,7 @@ Ensure your node is **fully synchronized** before creating a validator.
 
 Check sync status:
 ```bash
-0g-chain status | jq .sync_info
+0gchaind status | jq .sync_info
 ```
 If `"catching_up": false`, your node is fully synced.
 
@@ -82,17 +82,21 @@ If `"catching_up": false`, your node is fully synced.
 ## **🚀 Step 3: Create a Validator**
 Once the node is synced, create your validator:
 ```bash
-0g-chain tx staking create-validator \
-  --amount=1000000uog \
-  --pubkey=$(0g-chain tendermint show-validator) \
-  --moniker="OneNov" \
-  --chain-id=0g-chain-testnet \
-  --commission-rate="0.10" \
-  --commission-max-rate="0.20" \
-  --commission-max-change-rate="0.01" \
-  --min-self-delegation="1" \
-  --gas="auto" \
-  --from=mywallet
+0gchaind tx staking create-validator \
+--amount 1000000ua0gi \
+--from $WALLET \
+--commission-rate 0.1 \
+--commission-max-rate 0.2 \
+--commission-max-change-rate 0.01 \
+--min-self-delegation 1 \
+--pubkey $(0gchaind tendermint show-validator) \
+--moniker "test" \
+--identity "" \
+--website "" \
+--details "stake with me" \
+--chain-id zgtendermint_16600-2 \
+--gas-adjustment 1.5 --gas auto --gas-prices 0.00252ua0gi \
+-y
 ```
 📌 **Replace `--moniker="OneNov"` with your validator name.**
 
