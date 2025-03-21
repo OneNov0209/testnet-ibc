@@ -108,8 +108,10 @@ journalctl -u kiichaind -f -o cat
 
 ```bash
 kiichaind keys add wallet
+```
 # or recover
-# kiichaind keys add wallet --recover
+```
+kiichaind keys add wallet --recover
 ```
 
 ---
