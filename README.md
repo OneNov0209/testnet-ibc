@@ -18,9 +18,11 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 📌 Stay tuned for more updates and feel free to contribute to enhance the resources in this directory! 🚀
 
 
-# list 
+### list 
 
-[![Ogchain Logo](https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png)](https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain)
+<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain">
+    <img src="https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png" alt="Ogchain Logo" width="150">
+</a>
 
 ✅ [Symphony](https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony)
 
