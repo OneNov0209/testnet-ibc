@@ -160,9 +160,9 @@ kiichaind tx staking create-validator \
 
 ```bash
 kiichaind tx staking edit-validator \
-  --identity="09F974A66062BDCC" \
-  --website="https://github.com/OneNov0209" \
-  --security-contact="onenov0209@gmail.com" \
+  --identity="" \
+  --website="" \
+  --security-contact="" \
   --details="Stake With Me" \
   --chain-id=kiichain3 \
   --from=wallet \
