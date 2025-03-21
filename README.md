@@ -31,6 +31,6 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 </a>
 
 
-
-
-✅ [Kiichain](https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain)
+<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain">
+    <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="150">
+</a>
