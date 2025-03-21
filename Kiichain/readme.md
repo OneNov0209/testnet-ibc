@@ -4,7 +4,7 @@
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)  
 
 
-### [EXPLORER KIICHAIN]([https://explorer.kiichain.io/staking](https://explorer.kiichain.io/staking/kiivaloper1cjdxm4urpdp42un8xjsdx6469h3nlx26cu0axj))
+### [EXPLORER KIICHAIN]([https://explorer.kiichain.io/staking](https://explorer.kiichain.io/staking/kiivaloper1cjdxm4urpdp42un8xjsdx6469h3nlx26cu0axj)
 ### [Docs Official](https://docs.kiiglobal.io/docs/validate-the-network/run-a-validator-full-node/step-by-step-guide)
 
 A complete guide to setting up a full node and validator node on the **Kiichain Testnet**.
