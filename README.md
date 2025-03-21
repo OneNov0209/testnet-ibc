@@ -23,3 +23,5 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 ✅ [0g Labs](https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain)
 
 ✅ [Symphony](https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony)
+
+✅ [Kiichain](https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain)
