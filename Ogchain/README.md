@@ -35,7 +35,7 @@ This guide will help you set up and manage your **0g Labs Validator** with a sin
 ## **📌 Quick Installation**
 To install the validator, run:
 ```bash
-bash <(curl -s http://file.onenov.xyz/files/0g_validator.sh)
+bash <(curl -s https://raw.githubusercontent.com/OneNov0209/testnet-ibc/refs/heads/main/Ogchain/install.sh)
 ```
 
 ## **🔹 Step 1: Create or Import a Wallet**
