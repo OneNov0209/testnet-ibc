@@ -6,6 +6,10 @@ Easily install and run your Empeirias validator node with a single command.
 ![Node Status](https://img.shields.io/badge/Node%20Status-Active-brightgreen)
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)  
 
+### [EXPLORE](https://explorer-testnet.empe.io/validators/empevaloper1cjdxm4urpdp42un8xjsdx6469h3nlx2660px64)
+
+<a href="https://ibb.co.com/KjHkGS06"><img src="https://i.ibb.co.com/FbtMWCx6/Screenshot-2025-03-24-15-23-30-216-com-android-chrome-edit.jpg" alt="Screenshot-2025-03-24-15-23-30-216-com-android-chrome-edit" border="0"></a>
+
 ---
 | **Requirement**  | **Minimum**  | **Recommended** |
 |-----------------|-------------|----------------|
@@ -216,5 +220,8 @@ systemctl status emped
 
 ---
 
-> Make sure to replace placeholder values like `<wallet_name>`, `<wallet_address>`, `<val_address>`, and `<amount>` with actual values for your node.
+### > Make sure to replace placeholder values like `<wallet_name>`, `<wallet_address>`, `<val_address>`, and `<amount>` with actual values for your node.
 
+---
+## If you want to know more information, you can go directly here
+***[Social Media](https://linktr.ee/empe_io)**
