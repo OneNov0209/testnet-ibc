@@ -3,6 +3,19 @@
 
 Easily install and run your Empeirias validator node with a single command.
 
+![Node Status](https://img.shields.io/badge/Node%20Status-Active-brightgreen)
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)  
+
+---
+| **Requirement**  | **Minimum**  | **Recommended** |
+|-----------------|-------------|----------------|
+| **OS**         | Ubuntu 20.04+ | Ubuntu 22.04+  |
+| **CPU**        | 6 Cores      | 8+ Cores       |
+| **RAM**        | 8GB          | 16GB+          |
+| **Storage**    | 500GB SSD/NVMe | 1TB SSD/NVMe |
+| **Network**    | 10 Mbit/s    | 100 Mbit/s+    |
+---
+
 ---
 
 ## ⚙️ 1. Auto Installation
