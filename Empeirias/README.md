@@ -60,9 +60,15 @@ Make sure to:
 - Replace `test` with your validator name.
 - Replace `$WALLET` with your wallet name.
 
+  ## ✅ 3. Check status
+  ```
+  emped status 2>&1 | jq
+  ```
+  if status False, Let's Next steps
+
 ---
 
-## 📘 Cheat Sheet
+## 4. 📘 Cheat Sheet
 
 | Command | Description |
 |--------|-------------|
@@ -81,4 +87,3 @@ Make sure to:
 
 ---
 
-Need help? Reach out to the Empeirias team or fellow validators!
