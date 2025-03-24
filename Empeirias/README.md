@@ -70,20 +70,151 @@ Make sure to:
 
 ## 4. 📘 Cheat Sheet
 
-| Command | Description |
-|--------|-------------|
-| `emped status` | Check node status |
-| `emped config chain-id empe-testnet-2` | Set the chain ID |
-| `emped keys add <wallet>` | Create a new wallet |
-| `emped keys list` | Show wallets |
-| `emped keys show <wallet> -a` | Show wallet address |
-| `emped keys show <wallet> --pubkey` | Show public key |
-| `emped query account <address>` | Check wallet balance |
-| `emped query staking validator <val_address>` | Check validator info |
-| `emped tx staking delegate <val_address> <amount>uempe --from <wallet> --chain-id empe-testnet-2 --gas auto --fees 30uempe` | Delegate tokens |
-| `emped logs -f` | Follow log output |
-| `emped start` | Run the node |
-| `journalctl -u empeirias.service -f` | Check service logs |
+---
+
+### Create Wallet
+```bash
+emped keys add <wallet_name>
+```
+
+### Recover Wallet
+```bash
+emped keys add <wallet_name> --recover
+```
+
+### List Wallets
+```bash
+emped keys list
+```
+
+### Check Wallet Balance
+```bash
+emped query bank balances <wallet_address>
+```
 
 ---
+
+### Chain Info
+```bash
+emped status 2>&1 | jq .SyncInfo
+emped status | jq
+```
+
+### Node Info
+```bash
+emped tendermint show-node-id
+```
+
+---
+
+### Validator Operations
+
+***Check Validator Details**
+```bash
+emped query staking validator $(emped keys show $WALLET --bech val -a)
+```
+
+**Edit Validator Info**
+```bash
+emped tx staking edit-validator \
+  --moniker="YourMoniker" \
+  --identity="" \
+  --website="" \
+  --details="" \
+  --chain-id empe-testnet-2 \
+  --from $WALLET \
+  --gas auto --fees 500uempe \
+  -y
+```
+
+**Unjail Validator**
+```bash
+emped tx slashing unjail --from $WALLET --chain-id empe-testnet-2 --fees 500uempe -y
+```
+
+---
+
+### Delegation
+
+**Delegate Tokens**
+```bash
+emped tx staking delegate <val_address> 1000000uempe \
+  --from $WALLET \
+  --chain-id empe-testnet-2 \
+  --gas auto --fees 500uempe \
+  ```
+
+**Withdraw Rewards**
+```bash
+emped tx distribution withdraw-rewards <val_address> \
+  --from $WALLET --commission \
+  --chain-id empe-testnet-2 \
+  --gas auto --fees 500uempe \
+  -y
+```
+
+**Restake Rewards**
+```bash
+emped tx distribution withdraw-rewards <val_address> \
+  --from $WALLET \
+  --chain-id empe-testnet-2 \
+  --gas auto --fees 500uempe \
+  -y && \
+emped tx staking delegate <val_address> <amount> \
+  --from $WALLET \
+  --chain-id empe-testnet-2 \
+  --gas auto --fees 500uempe \
+  -y
+```
+
+---
+
+### Governance
+
+**Vote on Proposal**
+```bash
+emped tx gov vote <proposal_id> yes \
+  --from $WALLET \
+  --chain-id empe-testnet-2 \
+  --fees 500uempe \
+  -y
+```
+
+**Check Proposal**
+```bash
+emped query gov proposals
+```
+
+---
+
+### Service Management
+
+**Start Service**
+```bash
+sudo systemctl start emped
+```
+
+**Stop Service**
+```bash
+sudo systemctl stop emped
+```
+
+**Restart Service**
+```bash
+sudo systemctl restart emped
+```
+
+**Check Logs**
+```bash
+journalctl -fu emped -o cat
+```
+
+**Check Status**
+```bash
+systemctl status emped
+```
+
+---
+
+> Make sure to replace placeholder values like `<wallet_name>`, `<wallet_address>`, `<val_address>`, and `<amount>` with actual values for your node.
 
