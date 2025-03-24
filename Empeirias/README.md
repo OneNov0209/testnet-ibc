@@ -8,8 +8,7 @@ Easily install and run your Empeirias validator node with a single command.
 
 ### [EXPLORE](https://explorer-testnet.empe.io/validators/empevaloper1cjdxm4urpdp42un8xjsdx6469h3nlx2660px64)
 
-<a href="https://ibb.co.com/KjHkGS06"><img src="https://i.ibb.co.com/FbtMWCx6/Screenshot-2025-03-24-15-23-30-216-com-android-chrome-edit.jpg" alt="Screenshot-2025-03-24-15-23-30-216-com-android-chrome-edit" border="0"></a>
-
+[![Empeirias](https://i.ibb.co.com/FbtMWCx6/Screenshot-2025-03-24-15-23-30-216-com-android-chrome-edit.jpg)](https://ibb.co.com/KjHkGS06)
 ---
 | **Requirement**  | **Minimum**  | **Recommended** |
 |-----------------|-------------|----------------|
