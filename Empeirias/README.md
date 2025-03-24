@@ -217,12 +217,10 @@ journalctl -fu emped -o cat
 ```bash
 systemctl status emped
 ```
-
 ---
 
 ### > Make sure to replace placeholder values like `<wallet_name>`, `<wallet_address>`, `<val_address>`, and `<amount>` with actual values for your node.
-
 ---
 ## If you want to know more information, you can go directly here
 
-**[Social Media](https://linktr.ee/empe_io)**
+## **[Social Media](https://linktr.ee/empe_io)**
