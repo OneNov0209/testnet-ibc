@@ -4,7 +4,9 @@
 Easily install and run your Empeirias validator node with a single command.
 
 ![Node Status](https://img.shields.io/badge/Node%20Status-Active-brightgreen)
-![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)  
+![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)
+
+---
 
 ### [EXPLORE](https://explorer-testnet.empe.io/validators/empevaloper1cjdxm4urpdp42un8xjsdx6469h3nlx2660px64)
 
@@ -17,7 +19,6 @@ Easily install and run your Empeirias validator node with a single command.
 | **RAM**        | 8GB          | 16GB+          |
 | **Storage**    | 500GB SSD/NVMe | 1TB SSD/NVMe |
 | **Network**    | 10 Mbit/s    | 100 Mbit/s+    |
----
 
 ---
 
@@ -223,4 +224,5 @@ systemctl status emped
 
 ---
 ## If you want to know more information, you can go directly here
-***[Social Media](https://linktr.ee/empe_io)**
+
+**[Social Media](https://linktr.ee/empe_io)**
