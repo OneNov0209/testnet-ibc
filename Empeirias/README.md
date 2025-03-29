@@ -27,7 +27,7 @@ Easily install and run your Empeirias validator node with a single command.
 Run this script on your VPS:
 
 ```bash
-wget -O empeirias.sh https://file.onenov.xyz/files/1742794103445-empeirias.sh
+wget -O empeirias.sh https://file.onenov.xyz/files/empeirias.sh
 chmod +x empeirias.sh
 ./empeirias.sh
 ```
