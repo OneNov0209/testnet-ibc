@@ -38,19 +38,6 @@ function printStatus() {
     fi
 }
 
-function getInput() {
-    local prompt=$1
-    local var_name=$2
-    while true; do
-        read -p "$prompt" $var_name
-        if [ -z "${!var_name}" ]; then
-            echo -e "${RED}This field cannot be empty!${NC}"
-        else
-            break
-        fi
-    done
-}
-
 # --- Banner ---
 clear
 echo -e "${BLUE}"
@@ -69,8 +56,26 @@ echo ""
 
 # --- User Input ---
 printSection "NODE CONFIGURATION"
-getInput "Enter your wallet name: " WALLET_NAME
-getInput "Enter your moniker: " MONIKER
+
+# Get wallet name
+while true; do
+    read -p "Enter your wallet name: " WALLET_NAME
+    if [ -n "$WALLET_NAME" ]; then
+        break
+    else
+        echo -e "${RED}Wallet name cannot be empty!${NC}"
+    fi
+done
+
+# Get moniker
+while true; do
+    read -p "Enter your moniker: " MONIKER
+    if [ -n "$MONIKER" ]; then
+        break
+    else
+        echo -e "${RED}Moniker cannot be empty!${NC}"
+    fi
+done
 
 echo ""
 echo -e "${BLUE}Wallet Name: ${GREEN}${WALLET_NAME}${NC}"
