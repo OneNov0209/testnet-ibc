@@ -27,9 +27,7 @@ Easily install and run your Empeirias validator node with a single command.
 Run this script on your VPS:
 
 ```bash
-wget -O empeirias.sh https://file.onenov.xyz/files/empeirias.sh
-chmod +x empeirias.sh
-./empeirias.sh
+curl -sSL https://raw.githubusercontent.com/OneNov0209/testnet-ibc/refs/heads/main/Empeirias/empeirias_install.sh | bash
 ```
 
 This script will set up your node, install dependencies, download the binary, initialize the chain, and start syncing.
