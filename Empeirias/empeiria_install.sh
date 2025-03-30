@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ==============================================
-# AUTO INSTALLER EMPEIRIA NODE BY ONENOV
+# ONENOV NODE AUTO-INSTALLER
 # ==============================================
 
 # --- Configuration ---
@@ -38,41 +38,39 @@ function printStatus() {
     fi
 }
 
+function getInput() {
+    local prompt=$1
+    local var_name=$2
+    while true; do
+        read -p "$prompt" $var_name
+        if [ -z "${!var_name}" ]; then
+            echo -e "${RED}This field cannot be empty!${NC}"
+        else
+            break
+        fi
+    done
+}
+
 # --- Banner ---
 clear
 echo -e "${BLUE}"
 cat << "EOF"
-  ______ __  __ _____ _____ _____   _____ _____ ____  _   _ 
- |  ____|  \/  |_   _|_   _|  __ \ / ____|_   _/ __ \| \ | |
- | |__  | \  / | | |   | | | |__) | |  __  | || |  | |  \| |
- |  __| | |\/| | | |   | | |  _  /| | |_ | | || |  | | . ` |
- | |____| |  | |_| |_ _| |_| | \ \| |__| |_| || |__| | |\  |
- |______|_|  |_|_____|_____|_|  \_\\_____|_____\____/|_| \_|
+ ██████╗ ███╗   ██╗███████╗███╗   ██╗ ██████╗ ██╗   ██╗
+██╔═══██╗████╗  ██║██╔════╝████╗  ██║██╔═══██╗██║   ██║
+██║   ██║██╔██╗ ██║█████╗  ██╔██╗ ██║██║   ██║██║   ██║
+██║   ██║██║╚██╗██║██╔══╝  ██║╚██╗██║██║   ██║╚██╗ ██╔╝
+╚██████╔╝██║ ╚████║███████╗██║ ╚████║╚██████╔╝ ╚████╔╝
+ ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚═╝  ╚═══╝ ╚═════╝   ╚═══╝ 
 EOF
 echo -e "${NC}"
-echo -e "${GREEN}Empeiria Node Auto-Installer${NC}"
+echo -e "${GREEN}ONENOV Node Auto-Installer${NC}"
 echo -e "${GREEN}Chain ID: ${CHAIN_ID}${NC}"
 echo ""
 
 # --- User Input ---
 printSection "NODE CONFIGURATION"
-while true; do
-    read -p "Enter your wallet name: " WALLET_NAME
-    if [ -n "$WALLET_NAME" ]; then
-        break
-    else
-        echo -e "${RED}Wallet name cannot be empty!${NC}"
-    fi
-done
-
-while true; do
-    read -p "Enter your moniker: " MONIKER
-    if [ -n "$MONIKER" ]; then
-        break
-    else
-        echo -e "${RED}Moniker cannot be empty!${NC}"
-    fi
-done
+getInput "Enter your wallet name: " WALLET_NAME
+getInput "Enter your moniker: " MONIKER
 
 echo ""
 echo -e "${BLUE}Wallet Name: ${GREEN}${WALLET_NAME}${NC}"
@@ -156,7 +154,7 @@ printSection "SERVICE SETUP"
 echo -e "${BLUE}Creating systemd service...${NC}"
 sudo tee /etc/systemd/system/emped.service > /dev/null <<EOF
 [Unit]
-Description=Empeiria Node
+Description=ONENOV Node
 After=network-online.target
 
 [Service]
@@ -204,7 +202,7 @@ printStatus "Node started"
 
 # --- Final Instructions ---
 printSection "INSTALLATION COMPLETE"
-echo -e "${GREEN}Empeiria node has been successfully installed!${NC}"
+echo -e "${GREEN}ONENOV node has been successfully installed!${NC}"
 echo ""
 echo -e "${BLUE}Node Information:${NC}"
 echo -e "Moniker: ${GREEN}${MONIKER}${NC}"
@@ -231,4 +229,4 @@ echo -e "  --chain-id ${CHAIN_ID} \\"
 echo -e "  --gas auto \\"
 echo -e "  --gas-prices ${MIN_GAS_PRICE}${NC}"
 echo ""
-echo -e "${GREEN}Setup complete! Happy validating!${NC}"
+echo -e "${GREEN}ONENOV setup complete! Happy validating!${NC}"
