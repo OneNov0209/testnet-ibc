@@ -22,203 +22,107 @@ Easily install and run your Empeirias validator node with a single command.
 
 ---
 
-## ⚙️ 1. Auto Installation
-
-Run this script on your VPS:
-
+### **1. System Preparation**  
+Update and install basic dependencies:  
 ```bash
-curl -sSL https://raw.githubusercontent.com/OneNov0209/testnet-ibc/refs/heads/main/Empeirias/empeiria_install.sh | bash
+sudo apt update && sudo apt upgrade -y  
+sudo apt install curl tar wget clang pkg-config libssl-dev jq build-essential bsdmainutils git make ncdu gcc chrony liblz4-tool -y  
 ```
-
-This script will set up your node, install dependencies, download the binary, initialize the chain, and start syncing.
 
 ---
 
-## ✅ 2. Register Your Validator (After Sync Complete)
-
-Once your node is fully synced, register your validator using the command below:
-
+### **2. Install Go 1.21.6**  
 ```bash
-emped tx staking create-validator \
-  --amount 1000000uempe \
-  --from $WALLET \
-  --commission-rate 0.1 \
-  --commission-max-rate 0.2 \
-  --commission-max-change-rate 0.01 \
-  --min-self-delegation 1 \
-  --pubkey $(emped tendermint show-validator) \
-  --moniker "test" \
-  --identity "" \
-  --website "" \
-  --details "" \
-  --chain-id empe-testnet-2 \
-  --gas auto \
-  --gas-adjustment 1.5 \
-  --fees 30uempe \
-  -y
+ver="1.21.6"  
+wget "https://golang.org/dl/go$ver.linux-amd64.tar.gz"  
+sudo rm -rf /usr/local/go  
+sudo tar -C /usr/local -xzf "go$ver.linux-amd64.tar.gz"  
+rm "go$ver.linux-amd64.tar.gz"  
+echo "export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin" >> $HOME/.bash_profile  
+source $HOME/.bash_profile  
+go version  
 ```
 
-Make sure to:
-- Replace `test` with your validator name.
-- Replace `$WALLET` with your wallet name.
+---
 
-  ## ✅ 3. Check status
+### **3. Install `emped` Binary**  
+```bash
+mkdir -p $HOME/go/bin  
+curl -LO https://github.com/empe-io/empe-chain-releases/raw/master/v0.3.0/emped_v0.3.0_linux_amd64.tar.gz  
+tar -xvf emped_v0.3.0_linux_amd64.tar.gz  
+rm emped_v0.3.0_linux_amd64.tar.gz  
+chmod +x emped  
+mv emped $HOME/go/bin/  
+```
+---
+### **4. Initialize Node**  
+```bash
+emped init YOUR_NODE_NAME --chain-id empe-testnet-2  
+```
+### **5. Download Genesis and Addrbook**
+```
+wget -O $HOME/.empe-chain/config/genesis.json "https://raw.githubusercontent.com/empe-io/empe-chains/refs/heads/master/testnet-2/genesis.json"
+```
+### **6. Download Addrbook**
+```
+wget -O $HOME/.empe-chain/config/addrbook.json "https://raw.githubusercontent.com/111STAVR111/props/main/Empeiria/addrbook.json"
+```
+---
+### **7. Create Service**  
+```bash
+sudo tee /etc/systemd/system/emped.service > /dev/null <<EOF  
+[Unit]  
+Description=emped  
+After=network-online.target  
+
+[Service]  
+User=$USER  
+ExecStart=$HOME/go/bin/emped start  
+Restart=on-failure  
+RestartSec=3  
+LimitNOFILE=65535  
+
+[Install]  
+WantedBy=multi-user.target  
+EOF  
+```
+---
+### **8. Start Node**  
+```bash
+sudo systemctl daemon-reload  
+sudo systemctl enable emped  
+sudo systemctl start emped  
+```
+
+### **9. Download Snapshot**
+  ```bash
+  sudo systemctl stop emped  
+  rm -rf $HOME/.empe-chain/data  
+  curl -o - -L https://empe.snapshot-t.stavr.tech/emper-snap.tar.lz4 | lz4 -c -d - | tar -x -C $HOME/.empe-chain  
+  sudo systemctl restart emped  
   ```
-  emped status 2>&1 | jq
-  ```
-  if status False, Let's Next steps
+### 10. Chcek status syncron
+```
+emped status 2>&1 | jq
+```
+if status False Next Steps
 
----
-
-## 4. 📘 Cheat Sheet
-
----
-
-### Create Wallet
+### **11. (Optional) Create Validator**  
 ```bash
-emped keys add <wallet_name>
+emped tx staking create-validator \  
+  --amount 1000000uempe \  
+  --commission-rate 0.1 \  
+  --commission-max-rate 0.5 \  
+  --commission-max-change-rate 0.2 \  
+  --min-self-delegation 1 \  
+  --pubkey $(emped tendermint show-validator) \  
+  --moniker "YOUR_VALIDATOR_NAME" \  
+  --chain-id empe-testnet-2 \  
+  --from YOUR_WALLET_NAME -y  
+```
+### ***12Monitor logs:  
+```bash
+journalctl -fu emped -o cat  
 ```
 
-### Recover Wallet
-```bash
-emped keys add <wallet_name> --recover
-```
 
-### List Wallets
-```bash
-emped keys list
-```
-
-### Check Wallet Balance
-```bash
-emped query bank balances <wallet_address>
-```
-
----
-
-### Chain Info
-```bash
-emped status 2>&1 | jq .SyncInfo
-emped status | jq
-```
-
-### Node Info
-```bash
-emped tendermint show-node-id
-```
-
----
-
-### Validator Operations
-
-***Check Validator Details**
-```bash
-emped query staking validator $(emped keys show $WALLET --bech val -a)
-```
-
-**Edit Validator Info**
-```bash
-emped tx staking edit-validator \
-  --moniker="YourMoniker" \
-  --identity="" \
-  --website="" \
-  --details="" \
-  --chain-id empe-testnet-2 \
-  --from $WALLET \
-  --gas auto --fees 500uempe \
-  -y
-```
-
-**Unjail Validator**
-```bash
-emped tx slashing unjail --from $WALLET --chain-id empe-testnet-2 --fees 500uempe -y
-```
-
----
-
-### Delegation
-
-**Delegate Tokens**
-```bash
-emped tx staking delegate <val_address> 1000000uempe \
-  --from $WALLET \
-  --chain-id empe-testnet-2 \
-  --gas auto --fees 500uempe \
-  ```
-
-**Withdraw Rewards**
-```bash
-emped tx distribution withdraw-rewards <val_address> \
-  --from $WALLET --commission \
-  --chain-id empe-testnet-2 \
-  --gas auto --fees 500uempe \
-  -y
-```
-
-**Restake Rewards**
-```bash
-emped tx distribution withdraw-rewards <val_address> \
-  --from $WALLET \
-  --chain-id empe-testnet-2 \
-  --gas auto --fees 500uempe \
-  -y && \
-emped tx staking delegate <val_address> <amount> \
-  --from $WALLET \
-  --chain-id empe-testnet-2 \
-  --gas auto --fees 500uempe \
-  -y
-```
-
----
-
-### Governance
-
-**Vote on Proposal**
-```bash
-emped tx gov vote <proposal_id> yes \
-  --from $WALLET \
-  --chain-id empe-testnet-2 \
-  --fees 500uempe \
-  -y
-```
-
-**Check Proposal**
-```bash
-emped query gov proposals
-```
-
----
-
-### Service Management
-
-**Start Service**
-```bash
-sudo systemctl start emped
-```
-
-**Stop Service**
-```bash
-sudo systemctl stop emped
-```
-
-**Restart Service**
-```bash
-sudo systemctl restart emped
-```
-
-**Check Logs**
-```bash
-journalctl -fu emped -o cat
-```
-
-**Check Status**
-```bash
-systemctl status emped
-```
----
-
-### > Make sure to replace placeholder values like `<wallet_name>`, `<wallet_address>`, `<val_address>`, and `<amount>` with actual values for your node.
----
-## If you want to know more information, you can go directly here
-
-## **[Social Media](https://linktr.ee/empe_io)**
