@@ -1,7 +1,7 @@
 XOS INSTALLATION NODE VALIDATOR
 
 <p align="center">
-  <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" width="500" height=" alt="XOS Logo"/>
+  <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" width="500" height="200" alt="XOS Logo"/>
 </p>
 
 ![Ubuntu](https://img.shields.io/badge/Ubuntu-22.04-orange)  
