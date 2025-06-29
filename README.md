@@ -22,22 +22,27 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 
 ---
 
-<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain">
-    <img src="https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png" alt="Ogchain Logo" width="100" style="margin-right: 20px;">
-</a>
+<!-- Logo Lingkaran dengan Presisi -->
+<div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
 
-<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony">
-    <img src="https://i.postimg.cc/rmTm9sQJ/Picsart-25-03-21-11-27-50-014.png" alt="Symphony Logo" width="100" style="margin-right: 20px;">
-</a>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain">
+    <img src="https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png" alt="Ogchain Logo" width="100" style="border-radius: 50%; object-fit: cover;">
+  </a>
 
-<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain">
-    <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="100" style="margin-right: 20px;">
-</a>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony">
+    <img src="https://i.postimg.cc/rmTm9sQJ/Picsart-25-03-21-11-27-50-014.png" alt="Symphony Logo" width="100" style="border-radius: 50%; object-fit: cover;">
+  </a>
 
-<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias">
-  <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="empeirias logo" width="100" style="margin-right: 20px;">
-</a>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain">
+    <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="100" style="border-radius: 50%; object-fit: cover;">
+  </a>
 
-<a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS">
-  <img src=https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg alt="XOS logo" width="100" style="margin-right: 20px;">
-</a>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias">
+    <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="Empeirias Logo" width="100" style="border-radius: 50%; object-fit: cover;">
+  </a>
+
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS">
+    <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" alt="XOS Logo" width="100" style="border-radius: 50%; object-fit: cover;">
+  </a>
+
+</div>
