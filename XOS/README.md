@@ -78,17 +78,21 @@ make build
 
 ### Init Node
 ```bash
-xosd init <moniker> --chain-id <testnet-chain-id>
+xosd init Your_Validator_Nams --chain-id xos_1267-1
 ```
 
 ### Set Keyring Backend
 ```bash
-xosd config set client keyring-backend <os|file|test>
+xosd config set client keyring-backend file
 ```
 
 ### Create Wallet
 ```bash
-xosd keys add <key_name> --keyring-backend <os|file|test>
+xosd keys add wallet --keyring-backend file
+```
+Or if you recover wallet
+```
+xosd keys add myxoswallet --recover --keyring-backend file
 ```
 
 ---
