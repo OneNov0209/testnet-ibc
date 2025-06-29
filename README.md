@@ -57,4 +57,11 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
     </div>
   </a>
 
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/BlockX-Mainnet" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #444; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://pbs.twimg.com/profile_images/1571914336288776193/HmxJDHvF.jpg" alt="BlocKX" width="60" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">BlockX</span>
+    </div>
+  </a>
+
 </div>
