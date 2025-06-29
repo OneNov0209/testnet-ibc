@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="https://pbs.twimg.com/profile_images/1571914336288776193/HmxJDHvF.jpg" alt="BlockX Logo" width="120"/>
+  <img src="https://pbs.twimg.com/profile_images/1571914336288776193/HmxJDHvF.jpg" alt="BlockX Logo" width="250"/>
 </p>
 
 <p align="center">
