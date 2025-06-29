@@ -18,45 +18,45 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 📌 Stay tuned for more updates and feel free to contribute to enhance the resources in this directory! 🚀
 
 
-### ***list**
+### Active Validator
 
 ---
 
-<div style="display: flex; flex-wrap: wrap; gap: 15px;">
+<div align="center" style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
 
-  <div style="border: 1px solid #e1e4e8; border-radius: 10px; padding: 10px; text-align: center; width: 90px;">
-    <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain">
-      <img src="https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png" alt="Ogchain Logo" width="70" style="border-radius: 50%; object-fit: cover;"><br>
-      <small>Ogchain</small>
-    </a>
-  </div>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Ogchain" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #ddd; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://i.postimg.cc/mZ3hXY9G/0-g-labs1711467106027.png" alt="Ogchain" width="70" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">Ogchain</span>
+    </div>
+  </a>
 
-  <div style="border: 1px solid #e1e4e8; border-radius: 10px; padding: 10px; text-align: center; width: 90px;">
-    <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony">
-      <img src="https://i.postimg.cc/rmTm9sQJ/Picsart-25-03-21-11-27-50-014.png" alt="Symphony Logo" width="70" style="border-radius: 50%; object-fit: cover;"><br>
-      <small>Symphony</small>
-    </a>
-  </div>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Symphony" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #ddd; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://i.postimg.cc/rmTm9sQJ/Picsart-25-03-21-11-27-50-014.png" alt="Symphony" width="70" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">Symphony</span>
+    </div>
+  </a>
 
-  <div style="border: 1px solid #e1e4e8; border-radius: 10px; padding: 10px; text-align: center; width: 90px;">
-    <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain">
-      <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="70" style="border-radius: 50%; object-fit: cover;"><br>
-      <small>Kiichain</small>
-    </a>
-  </div>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #ddd; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain" width="70" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">Kiichain</span>
+    </div>
+  </a>
 
-  <div style="border: 1px solid #e1e4e8; border-radius: 10px; padding: 10px; text-align: center; width: 90px;">
-    <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias">
-      <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="Empeirias Logo" width="70" style="border-radius: 50%; object-fit: cover;"><br>
-      <small>Empeirias</small>
-    </a>
-  </div>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #ddd; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="Empeirias" width="70" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">Empeirias</span>
+    </div>
+  </a>
 
-  <div style="border: 1px solid #e1e4e8; border-radius: 10px; padding: 10px; text-align: center; width: 90px;">
-    <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS">
-      <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" alt="XOS Logo" width="70" style="border-radius: 50%; object-fit: cover;"><br>
-      <small>XOS</small>
-    </a>
-  </div>
+  <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS" style="text-align: center; text-decoration: none;">
+    <div style="border: 1px solid #ddd; border-radius: 12px; padding: 10px; width: 90px;">
+      <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" alt="XOS" width="70" style="border-radius: 50%;"><br>
+      <span style="font-size: 12px;">XOS</span>
+    </div>
+  </a>
 
 </div>
