@@ -1,4 +1,5 @@
-## XOS Node Installation 
+XOS installation Mode Validatorn
+
 
 <p align="center">
   <img src="https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg" width="200" alt="XOS Logo"/>
@@ -10,7 +11,7 @@
 
 ---
 
-## System Requirements
+## ðŸ§± System Requirements
 
 | Requirement | Minimum       | Recommended     |
 |------------|----------------|-----------------|
@@ -22,7 +23,7 @@
 
 ---
 
-## XOS Node Installation Guide (Testnet)
+## ðŸš€ XOS Node Installation Guide (Testnet)
 
 ### 1. Download Binary
 ```bash
@@ -74,7 +75,7 @@ make build
 
 ---
 
-## Node Setup
+## âš™ï¸ Node Setup
 
 ### Init Node
 ```bash
@@ -93,7 +94,7 @@ xosd keys add <key_name> --keyring-backend <os|file|test>
 
 ---
 
-## Join the Network
+## ðŸŒ Join the Network
 
 ### Download Genesis
 ```bash
@@ -109,7 +110,7 @@ cat ~/.xosd/config/config.toml | grep seeds
 
 ---
 
-## Start Node
+## ðŸ”„ Start Node
 ```bash
 xosd start
 ```
@@ -121,23 +122,23 @@ xosd status | jq
 
 ---
 
-## Useful Links
+## ðŸ§­ Useful Links
 
-### XOS Official
-- ðŸŒ Website: [https://x.ink](https://x.ink/)
-- ðŸ’¬ Discord: [https://discord.gg/xosnetwork](https://discord.gg/xosnetwork)
-- ðŸ¦ Twitter: [https://x.com/xos_labs](https://x.com/xos_labs)
-- ðŸ“¢ Telegram: [https://t.me/XosTelegram](https://t.me/XosTelegram)
-- ðŸ“š Docs: [https://docs.x.ink/](https://docs.x.ink/)
-- ðŸ§ª Test IDE: [https://ide.x.ink/](https://ide.x.ink/)
+### ðŸ”— XOS Official
+- ðŸŒ Website: https://x.ink/
+- ðŸ’¬ Discord: https://discord.gg/xosnetwork
+- ðŸ¦ Twitter: https://x.com/xos_labs
+- âœˆï¸ Telegram: https://t.me/XosTelegram
+- ðŸ“š Docs: https://docs.x.ink/
+- ðŸ§ª Test IDE: https://ide.x.ink/
 
 ### ðŸ§ª Testnet Tools
-- ðŸ’§ Faucet: [https://faucet.x.ink/](https://faucet.x.ink/)
-- ðŸ’± DEX: [https://dex.x.ink/](https://dex.x.ink/)
-- ðŸ”Ž Explorer: [https://xoscan.io/](https://xoscan.io/)
-- ðŸŒ Web3 Domain: [https://openid.network/](https://openid.network/)
-- ðŸŽ® Game.Game: [https://game.game/](https://game.game/)
-- ðŸ•¹ï¸ PlayFi: [https://playfi.me/](https://playfi.me/)
+- ðŸ’§ Faucet: https://faucet.x.ink/
+- ðŸ’± DEX: https://dex.x.ink/
+- ðŸ”Ž Explorer: https://xoscan.io/
+- ðŸŒ Web3 Domain: https://openid.network/
+- ðŸŽ® Game.Game: https://game.game/
+- ðŸŽ² PlayFi: https://playfi.me/
 
 ---
 
