@@ -31,13 +31,13 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 </a>
 
 <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain">
-    <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="100">
+    <img src="https://i.postimg.cc/t4MnFFZG/Picsart-25-03-21-11-35-55-562.png" alt="Kiichain Logo" width="100" style="margin-right: 20px;">
 </a>
 
 <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias">
-  <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="empeirias logo" width="100">
+  <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="empeirias logo" width="100" style="margin-right: 20px;">
 </a>
 
 <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS">
-  <img src=https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg alt="XOS logo" width="100">
+  <img src=https://pbs.twimg.com/profile_images/1861059503325913088/axi4e4i1.jpg alt="XOS logo" width="100" style="margin-right: 20px;">
 </a>
