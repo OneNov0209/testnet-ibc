@@ -78,7 +78,7 @@ make build
 
 ### Init Node
 ```bash
-xosd init Your_Validator_Nams --chain-id xos_1267-1
+xosd init Your_Validator_Name --chain-id xos_1267-1
 ```
 
 ### Set Keyring Backend
@@ -113,14 +113,44 @@ cat ~/.xosd/config/config.toml | grep seeds
 
 ---
 
-## 🔄 Start Node
+## 🔄 Create Service
 ```bash
-xosd start
+sudo tee /etc/systemd/system/xosd.service > /dev/null <<EOF
+[Unit]
+Description=XOS Daemon
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=root
+ExecStart=/usr/local/bin/xosd start
+Restart=on-failure
+RestartSec=5
+LimitNOFILE=65535
+
+[Install]
+WantedBy=multi-user.target
+EOF
 ```
 
-### Check Sync Status
+### Start Node
 ```bash
-xosd status | jq
+sudo systemctl daemon-reexec
+sudo systemctl daemon-reload
+sudo systemctl enable xosd
+sudo systemctl start xosd
+```
+### Cehck Status
+```
+sudo systemctl status xosd
+```
+### Check logs
+```
+journalctl -u xosd -f -o cat
+```
+### Check Sync Node
+```
+xosd status 2>&1 | jq .SyncInfo
 ```
 
 ---
