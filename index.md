@@ -30,6 +30,7 @@
       border-radius: 8px;
       cursor: pointer;
       font-size: 14px;
+      z-index: 999;
     }
     a { color: #1e88e5; text-decoration: none; }
     .dark-mode a { color: #90caf9; }
@@ -56,6 +57,8 @@
     }
     .validator-card img {
       width: 60px;
+      height: 60px;
+      object-fit: cover;
       border-radius: 50%;
     }
     .validator-card span {
@@ -105,13 +108,13 @@
     </a>
 
     <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Kiichain" class="validator-card">
-      <img src="https://pbs.twimg.com/profile_images/1800553180083666944/zZe128CW.jpg)" alt="Kiichain">
+      <img src="https://pbs.twimg.com/profile_images/1800553180083666944/zZe128CW.jpg" alt="Kiichain">
       <span>Kiichain</span>
     </a>
 
     <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias" class="validator-card">
       <img src="https://pbs.twimg.com/profile_images/1887069794798632960/IvxbLJcg.jpg" alt="Empeirias">
-      <span>Empeiria</span>
+      <span>Empeirias</span>
     </a>
 
     <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/XOS" class="validator-card">
