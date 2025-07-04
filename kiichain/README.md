@@ -54,12 +54,12 @@ make install
 CHAIN_ID="oro_1336-1"
 NODE_HOME="$HOME/.kiichain"
 NODE_MONIKER="moniker_anda"
-PERSISTENT_PEERS="5b6aa551...@uno...,5e6b283c...@dos..."
+PERSISTENT_PEERS="5b6aa55124c0fd28e47d7da091a69973964a9fe1@uno.sentry.testnet.v3.kiivalidator.com:26656,5e6b283c8879e8d1b0866bda20949f9886aff967@dos.sentry.testnet.v3.kiivalidator.com:26656"
 MINIMUM_GAS_PRICES="1000000000akii"
 GENESIS_URL="https://raw.githubusercontent.com/KiiChain/testnets/refs/heads/main/testnet_oro/genesis.json"
-
+```
+```
 kiichaind init $NODE_MONIKER --chain-id $CHAIN_ID --home $NODE_HOME
-wget $GENESIS_URL -O $NODE_HOME/config/genesis.json
 ```
 
 ### 5. Konfigurasi Peers & Gas
