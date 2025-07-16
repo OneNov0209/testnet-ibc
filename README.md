@@ -45,7 +45,7 @@ The Inter-Blockchain Communication (IBC) protocol enables seamless communication
 
   <a href="https://github.com/OneNov0209/testnet-ibc/tree/main/Empeirias" style="text-align: center; text-decoration: none;">
     <div style="border: 1px solid #444; border-radius: 12px; padding: 10px; width: 90px;">
-      <img src="https://i.ibb.co.com/SDrF8vH9/1-Fqd0v-Wn81-kb-D-OXHJm-Yv-A.png" alt="Empeirias" width="60" style="border-radius: 50%;"><br>
+      <img src="https://pbs.twimg.com/profile_images/1887069794798632960/IvxbLJcg.jpg" alt="Empeirias" width="60" style="border-radius: 50%;"><br>
       <span style="font-size: 12px;">Empeirias</span>
     </div>
   </a>
