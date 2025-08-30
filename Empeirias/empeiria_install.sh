@@ -6,7 +6,7 @@
 
 # --- Configuration ---
 CHAIN_ID="empe-testnet-2"
-BINARY_URL="https://github.com/empe-io/empe-chain-releases/raw/master/v0.3.0/emped_v0.3.0_linux_amd64.tar.gz"
+BINARY_URL="https://github.com/empe-io/empe-chain-releases/raw/master/v0.4.0/emped_v0.4.0_linux_amd64.tar.gz"
 GENESIS_URL="https://raw.githubusercontent.com/111STAVR111/props/main/Empeiria/genesis.json"
 ADDRBOOK_URL="https://raw.githubusercontent.com/111STAVR111/props/main/Empeiria/addrbook.json"
 SNAPSHOT_URL="https://empe.snapshot-t.stavr.tech/emper-snap.tar.lz4"
