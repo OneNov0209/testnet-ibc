@@ -67,7 +67,7 @@ sudo apt install -y curl wget jq lz4 build-essential git ca-certificates gnupg l
 printStatus "System updated and packages installed"
 
 printSection "Step 2: Install Go $GO_VERSION"
-wget https://go.dev/dl/go$GO_VERSION.linux-amd64.tar.gz
+wget https://go.dev/dl/go$GO_VERSION.linux-amd64.tar.gz -O go$GO_VERSION.linux-amd64.tar.gz
 sudo rm -rf /usr/local/go && sudo tar -C /usr/local -xzf go$GO_VERSION.linux-amd64.tar.gz
 echo 'export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin' >> ~/.bashrc
 source ~/.bashrc
@@ -75,6 +75,7 @@ go version
 printStatus "Go $GO_VERSION installed"
 
 printSection "Step 3: Clone and Build Uptick Network"
+cd $HOME
 git clone $REPO_URL
 cd uptick
 git checkout $VERSION
@@ -82,10 +83,10 @@ make install
 printStatus "Uptick Network built and installed"
 
 printSection "Step 4: Initialize Node"
-uptickd init "$MONIKER" --chain-id $CHAIN_ID
-uptickd config chain-id $CHAIN_ID
-uptickd config keyring-backend file
-uptickd config node tcp://localhost:$RPC_PORT
+$HOME/go/bin/uptickd init "$MONIKER" --chain-id $CHAIN_ID
+$HOME/go/bin/uptickd config chain-id $CHAIN_ID
+$HOME/go/bin/uptickd config keyring-backend file
+$HOME/go/bin/uptickd config node tcp://localhost:$RPC_PORT
 printStatus "Node initialized with moniker: $MONIKER"
 
 printSection "Step 5: Configure Pruning"
@@ -135,7 +136,7 @@ After=network-online.target
 
 [Service]
 User=$USER
-ExecStart=$(which uptickd) start
+ExecStart=$HOME/go/bin/uptickd start
 Restart=on-failure
 RestartSec=3
 LimitNOFILE=65535
@@ -165,6 +166,6 @@ echo -e "${YELLOW}Pruning:${NC} $PRUNING_MODE"
 echo ""
 echo -e "${GREEN}Check node status:${NC} sudo systemctl status uptickd"
 echo -e "${GREEN}Check node logs:${NC} sudo journalctl -u uptickd -f -o cat"
-echo -e "${GREEN}Check sync status:${NC} uptickd status 2>&1 | jq .SyncInfo"
+echo -e "${GREEN}Check sync status:${NC} curl -s http://localhost:$RPC_PORT/status | jq .result.sync_info"
 echo ""
 echo -e "${YELLOW}Don't forget to create validator after synchronization is complete!${NC}"
